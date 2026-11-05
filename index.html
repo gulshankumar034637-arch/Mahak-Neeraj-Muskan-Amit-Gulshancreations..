@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2a1c0a"><meta name="description" content="Wedding invitation for Mahak weds Neeraj and Muskan weds Amit">
+<title>Mahak &amp; Muskan — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<div class="cardstage" id="cardStage" aria-label="Wedding invitation card">
+  <video class="stage-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/royal-courtyard.mp4" type="video/mp4"></video>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="book" id="book">
+    <div class="page" id="scratch">
+      <div class="s-card" id="sCard">
+        <div class="s-scratch">
+          <p class="s-kicker">A little surprise for you</p>
+          <h2 id="sTitle">Scratch the heart</h2>
+          <p class="s-sub" id="sHint">Rub gently with your finger or mouse</p>
+          <div class="s-heart" id="sHeart">
+            <div class="s-under"><b>♥</b><span id="sNames">Mahak &amp; Muskan</span><small id="sDate">20 November 2026</small></div>
+            <canvas id="sCanvas" aria-label="Scratch the gold heart to reveal the date"></canvas>
+          </div>
+          <div class="s-bar" aria-hidden="true"><i id="sFill"></i></div>
+          <button class="s-skip" id="sSkip" type="button">Skip scratch · Show the date</button>
+        </div>
+        <div class="s-std" aria-live="polite">
+          <p class="st-script">Save the Date</p>
+          <i class="st-orn" aria-hidden="true">✦ ❋ ✦</i>
+          <p class="st-week" id="stWeek">Thursday</p>
+          <p class="st-day" id="stDay">10</p>
+          <p class="st-month" id="stMonth">November 2026</p>
+          <p class="st-time" id="stTime">7:00 pm onwards</p>
+          <p class="st-names" id="stNames">Mahak &amp; Muskan</p><p class="st-time">Mahak weds Neeraj · Muskan weds Amit</p>
+          <div class="st-btns"><button class="btn" id="sGo" type="button">View invitation</button><button class="btn ghost" id="calBtn" type="button">Add to calendar</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="cover" id="cover" role="button" tabindex="0" aria-label="Tap to open the invitation card">
+      <div class="face front" id="cvFront">
+        <p class="cv-small">The wedding of</p>
+        <p class="cv-names" id="cvNames">Mahak &amp; Muskan</p><p class="cv-small">weds Neeraj &amp; Amit</p>
+        <p class="cv-date" id="cvDate">20 November 2026</p>
+        <span class="cv-open">Tap to open</span>
+      </div>
+      <span class="seal" aria-hidden="true">❋</span>
+    </div>
+  </div>
+</div>
+<div class="royal-opening" id="royalOpening" role="dialog" aria-modal="true" aria-label="Open the wedding invitation">
+  <video class="opening-motion-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/burgundy-motion.mp4" type="video/mp4"></video>
+  <div class="opening-sky" aria-hidden="true"><span class="moon"></span><span class="opening-star star-a">✦</span><span class="opening-star star-b">✧</span><span class="opening-star star-c">✦</span></div>
+  <div class="opening-copy"><p class="opening-small">WEDDING INVITATION</p><h1 class="opening-names"><span class="oc"><b id="o1b">Mahak</b><i>weds</i><b id="o1g">Neeraj</b></span><span class="oc"><b id="o2b">Muskan</b><i>weds</i><b id="o2g">Amit</b></span></h1><p class="opening-date" id="doorDate">20 November 2026</p></div>
+  <div class="gate-video-wrap" aria-label="Royal Rajasthani palace gate opening">
+    <video id="gateVideo" class="gate-video" preload="auto" playsinline muted poster="assets/gate-poster-2.jpg">
+      <source src="assets/rajasthani-gate-2.mp4" type="video/mp4">
+    </video>
+    <div class="gate-video-vignette" aria-hidden="true"></div>
+    <div class="gate-video-frame" aria-hidden="true"></div>
+  </div>
+  <button class="opening-button" id="openRoyal" type="button"><span>✦</span> TAP TO OPEN <span>✦</span></button>
+  <div class="opening-petals" aria-hidden="true"><i>✦</i><i>✧</i><i>✦</i><i>❋</i><i>✧</i><i>✦</i><i>❋</i><i>✧</i></div>
+</div>
+
+
+<canvas id="dust" aria-hidden="true"></canvas>
+<button class="music" id="music" type="button" aria-label="Play music"><span id="mIcon">♫</span><span id="mLabel">Play music</span></button>
+<audio id="song" loop preload="metadata"><source src="assets/wedding-song.mp3" type="audio/mpeg"></audio>
+
+<main>
+
+<section class="hero" id="hero"><video class="courtyard-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/royal-courtyard.mp4" type="video/mp4"></video>
+  <canvas id="petals" class="petal-cv" aria-hidden="true"></canvas>
+  <p class="kicker" id="kick">Together with their families</p>
+  <div class="stage">
+    <div class="hero-arch" aria-hidden="true"><img src="assets/chhatri.jpg" alt=""></div>
+    <div class="pair" id="pair">
+      
+      <figure class="pc left"><img id="pGroom" alt="Groom"></figure>
+      <figure class="pc right"><img id="pBride" alt="Bride"></figure>
+    </div>
+  </div>
+  <h1 class="pairs"><span class="cpl"><span class="nm" id="n1b">Mahak</span><em>weds</em><span class="nm" id="n1g">Neeraj</span></span><span class="cpl"><span class="nm" id="n2b">Muskan</span><em>weds</em><span class="nm" id="n2g">Amit</span></span></h1>
+  <p class="tag" id="tag">Mahak weds Neeraj  ·  Muskan weds Amit</p>
+  <p class="hero-date" id="dLabel">20 November 2026</p>
+  <i class="hero-orn" aria-hidden="true">✦ ❋ ✦</i><p class="hero-venue" id="heroVenue">Om Eco Farm, Bhushan Kalan</p>
+  <a class="btn" href="#events">View celebrations</a><span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<section class="sec welcome rv" id="invite"><p class="script">!! Shree Ganeshai Namah !!</p><h2>Wedding Invitation</h2>
+<p class="copy">Marriages are made in heaven, celebrated on earth unity of two unknown souls, written right from birth.<br>With divine blessings and joyful hearts</p>
+<p class="host">Smt. Sweety &amp; Sh. Rajesh Kumar Yadav</p>
+<p class="copy mini">together with our parents</p>
+<p class="host">Smt. Ratna Devi &amp; Sh. Omprakash Yadav</p>
+<p class="copy">We are delighted to invite you to celebrate the union of our beloved daughters and Grand Daughters</p>
+<div class="couples"><div class="cp"><strong>Mahak</strong><em>Weds</em><strong>Neeraj</strong></div><div class="cp"><strong>Muskan</strong><em>Weds</em><strong>Amit</strong></div></div>
+<p class="copy mini">(S/o Smt. Babli Devi &amp; Sh. Rajesh Ji Yadav, R/o Manethi (Kund))</p></section>
+
+<section class="sec dark count rv"><h2>Until we say “I do”</h2>
+<div class="cd"><div><strong id="days">00</strong><span>Days</span></div><div><strong id="hours">00</strong><span>Hours</span></div><div><strong id="minutes">00</strong><span>Minutes</span></div><div><strong id="seconds">00</strong><span>Seconds</span></div></div></section>
+
+<section class="sec rv" id="events"><h2>Golden Moments</h2><p class="mantra" lang="sa">मंगलम् भगवान् विष्णुः, मंगलम् गरुड़ध्वजः ।<br>मंगलम् पुण्डरीकाक्ष, मंगलायतनं हरिः ॥</p><div id="evGrid" class="ev-grid"></div></section>
+
+<section class="sec tint rv" id="family"><h2>Invitation details</h2>
+<div class="info-grid">
+  <div class="info-card"><h3>Haldi Ceremony</h3><p><em>We joyfully invite you to the celebration of colours of</em></p><p><strong>MAHAK &amp; MUSKAN</strong></p><p>November 19 2026<br>Time: 11:30 a.m to 1:30 p.m<br>VENUE: Om Eco Farm</p><p><em>Lunch will be served on that occasion</em></p><p>Dress Code: Traditional attire<br>(Yellow &amp; Fuchsia)</p></div>
+  <div class="info-card"><h3>Mehendi &amp; Sangeet Ceremony</h3><p><em>Colours, Music &amp; Love come together.</em><br>Join us for an amazing evening of Henna &amp; Dance in honour of the brides to be</p><p><strong>MAHAK &amp; MUSKAN</strong></p><p>November 19 2026<br>Time: 6 p.m to 10:30 p.m<br>VENUE: Om Eco Farm</p><p><em>Dinner will be served on that occasion</em></p><p>Dress Code: Indian Traditional<br>(Purple, Orange, Green)</p><p><em>Don’t forget your dancing shoes</em></p></div>
+  <div class="info-card"><h3>A Cordial Invitation From</h3><p><strong>OMPRAKASH YADAV</strong></p><p>Om Eco Farm<br>Vill. Bhushan Kalan Teh. Narnaul<br>Distt. Mahendergarh (Hry.)</p><p>M. <a href="tel:+919650291677">9650291677</a>, <a href="tel:+918059095742">8059095742</a>, <a href="tel:+919716750033">9716750033</a></p></div>
+  <div class="info-card"><h3>R.S.V.P.</h3><p><strong>RAJESH KUMAR YADAV</strong></p><p>Vill. Bhushan Kalan<br>Teh. Narnaul<br>Distt. M/Garh (Hry.)</p><p>M. <a href="tel:+919650291677">9650291677</a></p></div>
+  <div class="info-card"><h3>With the blessing of</h3><p>Late Smt. Sharmila Devi<br>Late Sh. Ramnarayan Yadav<br>Late Smt. Resham Devi</p></div>
+  <div class="info-card"><h3>Love &amp; Gratitude</h3><p>Chacha Ji-Chachai Ji<br>Mama Ji-Mami Ji<br>Ayush<br>Joy and Delight<br>Little Devisha</p></div>
+  <div class="info-card"><h3>With best Compliments from</h3><p>Ex. S.B. Surender Kumar, Sudesh Kumar<br>Devender Kumar, Arvind, Harish, Manoj<br>Ayush All Kaririya Family &amp; Friends</p></div>
+</div>
+<p class="info-note">Note : Kindly Accept the invitation of the Ladies through this card as well</p></section>
+
+<section class="sec tint rv"><h2>Venue</h2>
+<div class="venue tilt"><div class="pin">⌖</div><h3 id="vName">Om Eco Farm, Bhushan Kalan</h3><p id="vAddr">Om Eco Farm, V.P.O. Bhushan Kalan, Teh. Narnaul, Distt. Mahendergarh (Haryana)</p><a id="map" class="btn ghost" href="https://www.google.com/maps/dir//Om+Eco+Village,+V.P.O.+Bhushan+Kalan,+Narnaul,+Haryana+123001/@27.9002825,76.282667,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3912b32f3da5d64b:0xabe5b2c74a067d7d!2m2!1d76.1928472!2d28.0254123?entry=ttu&amp;g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Get directions</a></div></section>
+
+<section class="sec rv" id="memories"><h2>Our memories</h2><div id="gal" class="gal"></div></section>
+
+<section class="sec dark close rv"><canvas class="petal-cv" data-d=".6" aria-hidden="true"></canvas><p class="script">R.S.V.P. · Rajesh Kumar Yadav · 9650291677</p><h2 id="cTitle">Celebrate with us</h2><p class="copy" id="cText">We look forward to sharing laughter, blessings and beautiful memories with you.</p><button class="btn" id="share" type="button">Share invitation</button><p class="sign">A Cordial Invitation From<strong>Omprakash Yadav</strong></p></section>
+</main>
+<footer>Made with love · Mahak &amp; Muskan · 19–20 November 2026</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script><script src="script.js"></script>
+</body></html>
