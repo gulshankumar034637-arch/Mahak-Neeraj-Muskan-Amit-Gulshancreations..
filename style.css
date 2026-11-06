@@ -584,3 +584,20 @@ h1.pairs .cpl em{display:inline-block;font-size:.55em;margin:0 .45em;vertical-al
 .cp{font:500 clamp(34px,8vw,56px)/1.1 'Cormorant Garamond',serif;color:#4a3410}
 .cp em{font:400 .55em 'Pinyon Script',cursive;color:#8a6a1c;margin:0 .35em}
 .mantra{max-width:620px;margin:-6px auto 24px;text-align:center;font:500 20px/1.8 'Cormorant Garamond',serif;color:#7a5a14}
+
+/* ===== v2: opening names/date, save-the-date, scratch heart ===== */
+.royal-opening .opening-copy:before{content:"";position:absolute;inset:-28px -6px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at center,rgba(20,10,2,.62) 0%,rgba(20,10,2,.42) 45%,rgba(20,10,2,0) 72%)}
+.royal-opening .opening-small{font-size:12px!important;letter-spacing:6px!important;margin:0 0 10px!important}
+.royal-opening .opening-names .oc{display:block!important;flex-basis:100%;white-space:nowrap;text-align:center;font:400 clamp(34px,10.8vw,60px)/1.12 'Great Vibes','Pinyon Script',cursive!important;padding:.02em .12em .1em;margin:0}
+.royal-opening .opening-names .oc b{font:inherit;font-weight:inherit}
+.royal-opening .opening-names .oc i{display:inline-block!important;margin:0 .18em;font:italic 400 .4em 'Cormorant Garamond',serif!important;letter-spacing:.1em;vertical-align:middle;color:#E8CF7A}
+.royal-opening .opening-names .oc i:before,.royal-opening .opening-names .oc i:after{display:none!important}
+.royal-opening .opening-names .oc+.oc:before{content:"✦";display:block;font:400 14px/1 'Jost',sans-serif;color:#D4AF37;-webkit-text-fill-color:#D4AF37;margin:.3rem 0 .4rem}
+.royal-opening .opening-date{font:500 clamp(10px,3.1vw,13px) 'Jost',sans-serif!important;letter-spacing:.2em!important;white-space:nowrap;padding-left:.2em;margin-top:14px!important;text-align:center}
+
+.st-couples{margin:6px 0 18px;display:flex;flex-direction:column;align-items:center}
+.st-couples span{display:block;white-space:nowrap;font:400 clamp(26px,min(4.8svh,8.8vw),38px)/1.2 'Great Vibes','Pinyon Script',cursive;color:#7b653a}
+.st-orn{margin:6px 0 4px!important}.st-month{margin-bottom:14px!important}
+
+.s-under span strong{font-size:clamp(26px,min(4.4svh,8vw),34px)!important;white-space:nowrap}
+.s-under small{font-size:12px!important;letter-spacing:3px!important;margin-top:10px!important}

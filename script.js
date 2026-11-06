@@ -14,7 +14,7 @@ const cp = cfg.couples || [{ bride: 'Mahak', groom: 'Neeraj' }, { bride: 'Muskan
 $('tag').textContent = cfg.tagline || ''; $('dLabel').textContent = cfg.dateLabel || '';
 $('vName').textContent = cfg.venue || ''; $('vAddr').textContent = cfg.address || '';
 $('map').href = cfg.mapsUrl || 'https://maps.google.com/';
-$('sNames').replaceChildren(...[cfg.groom || 'Satish', '&', cfg.bride || 'Geeta'].map((t, i) => Object.assign(document.createElement(i === 1 ? 'em' : 'strong'), { textContent: t }))); $('sDate').textContent = cfg.dateLabel || '';
+$('sNames').replaceChildren(Object.assign(document.createElement('strong'), { textContent: 'Save the Date' })); $('sDate').textContent = new Date(cfg.weddingDate || '2026-12-10T19:00:00').toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
 
 if (lite) document.querySelectorAll('.opening-motion-bg,.stage-bg').forEach(v => v.remove());
 if (lite) document.querySelectorAll('video.courtyard-bg').forEach(v => { v.preload = 'none'; });
@@ -215,9 +215,8 @@ document.querySelectorAll('.sec h2').forEach(h => { const t = h.textContent; h.s
   t.split(' ').forEach((w, i) => { const o = document.createElement('span'), s = document.createElement('span'); o.className = 'w'; o.setAttribute('aria-hidden', 'true'); s.style.setProperty('--i', i); s.textContent = w; o.appendChild(s); h.append(o, ' '); }); });
 /* ---- invitation card: cover, save-the-date, calendar ---- */
 const wd = new Date(cfg.weddingDate || '2026-12-10T19:00:00'), L = o => wd.toLocaleDateString('en-IN', o);
-$('stWeek').textContent = L({ weekday: 'long' }); $('stDay').textContent = String(wd.getDate()).padStart(2, '0');
-$('stMonth').textContent = L({ month: 'long', year: 'numeric' }); $('stNames').textContent = names;
-$('stTime').textContent = wd.toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit' }) + ' onwards';
+$('stDay').textContent = String(wd.getDate()).padStart(2, '0');
+$('stMonth').textContent = L({ month: 'long', year: 'numeric' });
 $('cvNames').textContent = names; $('cvDate').textContent = cfg.dateLabel || L({ day: 'numeric', month: 'long', year: 'numeric' });
 
 const cov = $('cover'), fr = $('cvFront'), hl = document.createElement('div'), hr = document.createElement('div'), cl = fr.cloneNode(true);
