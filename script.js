@@ -210,6 +210,14 @@ const io2 = new IntersectionObserver(es => es.forEach(e => {
   setTimeout(() => { let i = 0; const iv = setInterval(() => { d.textContent = t.slice(0, ++i); if (i >= t.length) clearInterval(iv); }, 45); }, 800);
 }), { threshold: .35 });
 document.querySelectorAll('.tle').forEach(el => io2.observe(el));
+/* ---- functions: plain table (columns) instead of animated timeline ---- */
+if (cfg.eventsStyle === 'table') (() => {
+  const esc = s => String(s || '').replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  const days = []; (cfg.events || []).forEach(e => { let d = days.find(x => x.date === e.date); if (!d) days.push(d = { date: e.date, rows: [] }); d.rows.push(e); });
+  g.className = 'ev-table'; g.removeAttribute('style');
+  g.innerHTML = days.map(d => '<div class="evday"><h3>' + esc(d.date) + '</h3><table><thead><tr><th>Function</th><th>Time</th><th>Venue</th></tr></thead><tbody>' +
+    d.rows.map(e => '<tr><td class="fn">' + esc(e.name) + '</td><td>' + esc(e.time) + '</td><td>' + esc(e.venue) + '</td></tr>').join('') + '</tbody></table></div>').join('');
+})();
 /* ---- headings: words slide up from a mask ---- */
 document.querySelectorAll('.sec h2').forEach(h => { const t = h.textContent; h.setAttribute('aria-label', t); h.textContent = '';
   t.split(' ').forEach((w, i) => { const o = document.createElement('span'), s = document.createElement('span'); o.className = 'w'; o.setAttribute('aria-hidden', 'true'); s.style.setProperty('--i', i); s.textContent = w; o.appendChild(s); h.append(o, ' '); }); });

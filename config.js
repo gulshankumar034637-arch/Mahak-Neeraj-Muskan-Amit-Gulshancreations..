@@ -24,7 +24,10 @@ window.WEDDING = {
 
   theme: "royal",
   song: "assets/wedding-song.mp3",
-  photos: [],
+  photos: ["assets/couple1.jpg", "assets/couple2.jpg"],
+
+  // events layout: "timeline" (animated, original template) or "table" (plain columns)
+  eventsStyle: "timeline",
 
   // ===== EVENTS (Golden Moments) =====
   events: [
